@@ -1,0 +1,14 @@
+.test-page {
+	
+	.page-wrapper {
+		@include outer-container();
+	}
+
+	.page-main {
+		@include span-columns(7);
+	}
+
+	.page-sidebar {
+		@include span-columns(5);
+	}
+}

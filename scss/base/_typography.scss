@@ -1,0 +1,104 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font-family;
+  line-height: 1.25em;
+  margin: 0;
+  text-rendering: optimizeLegibility; // Fix the character spacing for headings
+}
+
+.giga {
+  font-size: modular-scale($base-font-size, 6, 1.414); // returns: 127.884px
+}
+
+.mega {
+  font-size: modular-scale($base-font-size, 5, 1.414); // returns: 90.441px
+}
+
+h1, .alpha {
+  font-size: modular-scale($base-font-size, 4, 1.414); // returns: 63.961px
+}
+
+h2, .beta {
+  font-size: modular-scale($base-font-size, 3, 1.414); // returns: 45.234px
+}
+
+h3, .gamma {
+  font-size: modular-scale($base-font-size, 2, 1.414); // returns: 31.99px
+}
+
+h4, .delta {
+  font-size: modular-scale($base-font-size, 1, 1.414); // returns: 22.624px
+}
+
+h5, .epsilon {
+  font-size: $base-font-size * 1.25; // returns: 20px
+}
+
+h6, .zeta {
+  font-size: $base-font-size * 1.125; // returns: 18px
+}
+
+p {
+  margin: 0 0 ($base-line-height * .5);
+}
+
+a {
+  color: $base-link-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+
+  &:hover {
+    color: $hover-link-color;
+  }
+
+  &:active, &:focus {
+    color: $hover-link-color;
+    outline: none;
+  }
+}
+
+hr {
+  border-bottom: 1px solid $base-border-color;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-line-height 0;
+}
+
+img {
+  margin: 0;
+  max-width: 100%;
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted $base-border-color;
+  cursor: help;
+}
+
+address {
+  display: block;
+  margin: 0 0 ($base-line-height / 2);
+}
+
+hgroup {
+  margin-bottom: $base-line-height / 2;
+}
+
+del {
+  color: lighten($base-font-color, 15);
+}
+
+blockquote {
+  border-left: 2px solid $base-border-color;
+  color: lighten($base-font-color, 15);
+  margin: $base-line-height 0;
+  padding-left: $base-line-height / 2;
+}
+
+cite {
+  color: lighten($base-font-color, 25);
+  font-style: italic;
+
+  &:before {
+    content: '\2014 \00A0';
+  }
+}

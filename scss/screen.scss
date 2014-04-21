@@ -1,0 +1,35 @@
+/* ==========================================================================
+   StyleSheet
+   Kick-off Theme by Mukesh Kumar
+   A base-theme for my work @Craft_Digital
+   ========================================================================== */
+// Set-up framework
+@import "bourbon";
+@import "neat";
+
+// Call up global variables
+@import "helpers/variables";
+@import "helpers/mixins";
+
+// Global base settings
+@import "base/reset";
+@import "base/base";
+@import "base/lists";
+@import "base/tables";
+@import "base/typography";
+@import "base/forms";
+
+// Component Styles
+@import "modules/button";
+
+// Layout Styles
+@import "layout/grid-settings";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/aside";
+
+//Test it out! Delete on live
+@import "layout/page-testpage";
+
+// Theme styles
+@import "theme/print";

@@ -1,0 +1,104 @@
+/* Global base styles */
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  @include box-sizing(border-box);
+ }
+
+body {
+	padding: 0; //do I need this? 
+	//default typography settings
+	color: $base-font-color;
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	-webkit-font-smoothing: antialiased;
+	line-height: $base-line-height;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: $base-font-color;
+}
+
+
+::-moz-selection {
+    background: $base-link-color;
+    text-shadow: none;
+}
+
+::selection {
+    background: $base-link-color;
+    text-shadow: none;
+}
+
+a {
+  color: $base-link-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+
+  &:hover {
+    color: $hover-link-color;
+  }
+
+  &:active, &:focus {
+    color: $hover-link-color;
+    outline: none;
+  }
+}
+
+hr {
+  border-bottom: 1px solid $base-border-color;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-line-height 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+img {
+  margin: 0;
+  max-width: 100%;
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted $base-border-color;
+  cursor: help;
+}
+
+address {
+  display: block;
+  margin: 0 0 ($base-line-height / 2);
+}
+
+hgroup {
+  margin-bottom: $base-line-height / 2;
+}
+
+del {
+  color: lighten($base-font-color, 15);
+}
+
+blockquote {
+  border-left: 2px solid $base-border-color;
+  color: lighten($base-font-color, 15);
+  margin: $base-line-height 0;
+  padding-left: $base-line-height / 2;
+}
+
+cite {
+  color: lighten($base-font-color, 25);
+  font-style: italic;
+
+  &:before {
+    content: '\2014 \00A0';
+  }
+}
